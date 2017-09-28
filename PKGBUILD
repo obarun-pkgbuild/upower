@@ -3,7 +3,7 @@
 # 						Maintainer: Jan de Groot <jgc@archlinux.org>
 
 pkgname=upower
-pkgver=0.99.4+12+g402640b
+pkgver=0.99.6
 pkgrel=2
 pkgdesc="Abstraction for enumerating power devices, listening to device events and querying history and statistics"
 arch=('x86_64')
@@ -12,7 +12,7 @@ license=('GPL')
 depends=('libusb' 'libimobiledevice' 'libgudev')
 makedepends=('intltool' 'docbook-xsl' 'gobject-introspection' 'python2' 'git' 'gtk-doc')
 backup=('etc/UPower/UPower.conf')
-_commit=402640bee016472bf61c7a4ad9e5fac9790ea1bf
+_commit=98d98fcbd039e66eb161d1d1e44d079a15ae2ef4 # tags/UPOWER_0_99_6^0
 source=(git://anongit.freedesktop.org/upower#commit=$_commit)
 md5sums=('SKIP')
 validpgpkeys=('6DD4217456569BA711566AC7F06E8FDE7B45DAAC') # Eric Vidal
