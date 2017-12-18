@@ -24,7 +24,7 @@ pkgver() {
 
 build() {
   cd ${pkgname}
-   
+   export PYTHONPATH="/usr/share/glib-2.0"
   NOCONFIGURE=1 ./autogen.sh
   
   ./configure \
