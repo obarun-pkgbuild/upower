@@ -4,7 +4,7 @@
 
 pkgname=upower
 pkgver=0.99.7
-pkgrel=2
+pkgrel=3
 pkgdesc="Abstraction for enumerating power devices, listening to device events and querying history and statistics"
 arch=('x86_64')
 url="http://upower.freedesktop.org"
@@ -13,7 +13,7 @@ depends=('libusb' 'libimobiledevice' 'libgudev')
 makedepends=('intltool' 'docbook-xsl' 'gobject-introspection' 'python2' 'git' 'gtk-doc')
 backup=('etc/UPower/UPower.conf')
 _commit=b443f750cfeee460323d8d9f214ff691345d01ef # tags/UPOWER_0_99_7^0
-source=(git://anongit.freedesktop.org/upower#commit=$_commit)
+source=("git+https://anongit.freedesktop.org/git/upower#commit=$_commit")
 md5sums=('SKIP')
 validpgpkeys=('6DD4217456569BA711566AC7F06E8FDE7B45DAAC') # Eric Vidal
 
@@ -31,7 +31,7 @@ build() {
     --prefix=/usr \
     --sysconfdir=/etc \
     --localstatedir=/var \
-    --libexecdir=/usr/lib/$pkgname \
+    --libexecdir=/usr/lib \
     --disable-static \
     --with-udevrulesdir=/usr/lib/udev/rules.d \
     --with-systemdsystemunitdir=no \
